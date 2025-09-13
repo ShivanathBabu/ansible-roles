@@ -22,7 +22,7 @@
 
 
 - name: check products loaded or not
-  ansible.builtin.command: mongosh --host mongodb.blackweb.agency --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
+  ansible.builtin.command: mongosh --host {{MONGODB_HOST}} --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
   # ignore_error: true
   # ignore_unreachable: true  ignore error
@@ -32,7 +32,7 @@
     msg: "{{ catalogue_output }}"
 
 - name: load products
-  ansible.builtin.shell: mongosh --host mongodb.blackweb.agency < /app/db/master-data.js
+  ansible.builtin.shell: mongosh --host {{MONGODB_HOST}} < /app/db/master-data.js
   when: catalogue_output.stdout | int < 0
 
 - name: systemd setup

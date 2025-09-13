@@ -1,1 +1,1 @@
-MONGODB_HOST: mongodb.blackweb.agency
+MONGODB_HOST: mongodb-{{ env }}.blackweb.agency
