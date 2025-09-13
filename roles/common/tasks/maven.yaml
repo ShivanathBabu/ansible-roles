@@ -1,0 +1,27 @@
+- name: install maven
+  ansible.builtin.dnf:
+    name: "{{item}}"
+    state: present
+  loop:
+  - maven
+  - mysql
+
+- name: install pymysql and cryptography
+  ansible.builtin.pip:
+    name: "{{item}}"
+    executable: pip3.9
+  loop:
+  - cryptography
+  - PyMySQL
+
+- name: install dependencies
+  ansible.builtin.command: mvn clean package
+  args:
+    chdir: /app
+
+#If your build creates shipping-1.1.jar, systemd won’t find it unless you update the service file so there fore we change file name.
+
+- name: rename jar file
+  ansible.builtin.command: "mv target/{{ component }}-1.0.jar {{ component }}.jar"
+  args:
+    chdir: /app
