@@ -1,2 +1,2 @@
-REDIS_HOST: redis.blackweb.agency
-CATALOGUE_HOST: catalogue.blackweb.agency
+REDIS_HOST: redis-{{ env }}.blackweb.agency
+CATALOGUE_HOST: catalogue.backend-{{ env }}.blackweb.agency

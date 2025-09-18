@@ -1,6 +1,6 @@
-CATALOGUE_HOST: catalogue.blackweb.agency
-USER_HOST: user.blackweb.agency
-CART_HOST: cart.blackweb.agency
-SHIPPING_HOST: shipping.blackweb.agency
-PAYMENT_HOST: payment.blackweb.agency
+CATALOGUE_HOST: catalogue.backend-{{ env }}.blackweb.agency
+USER_HOST: user.backend-{{ env }}.blackweb.agency
+CART_HOST: cart.backend-{{ env }}.blackweb.agency
+SHIPPING_HOST: shipping.backend-{{ env }}.blackweb.agency
+PAYMENT_HOST: payment.backend-{{ env }}.blackweb.agency
 

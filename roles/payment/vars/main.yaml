@@ -1,5 +1,5 @@
-CART_HOST: cart.blackweb.agency
-USER_HOST: user.blackweb.agency
-RABBIT_HOST: rabbitmq.blackweb.agency
+CART_HOST: cart.backend-{{ env }}.blackweb.agency
+USER_HOST: user.backend-{{ env }}.blackweb.agency
+RABBIT_HOST: rabbitmq-{{ env }}.blackweb.agency
 RABBITMQ_USER: roboshop
 RABBITMQ_PASSWORD: roboshop123

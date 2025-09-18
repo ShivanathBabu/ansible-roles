@@ -1,2 +1,2 @@
-REDIS_HOST: redis.blackweb.agency
-MONGODB_HOST: mongodb.blackweb.agency
+REDIS_HOST: redis-{{ env }}.blackweb.agency
+MONGODB_HOST: mongodb-{{ env }}.blackweb.agency
