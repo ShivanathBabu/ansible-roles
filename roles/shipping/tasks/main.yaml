@@ -9,8 +9,6 @@
     tasks_from: maven
 
 - name: import data
-  tags:
-  - import
   community.mysql.mysql_db: # check you can connect to the 
     name: all # all schema file import 
     login_user: "{{ MYSQL_ROOT_USER }}"
